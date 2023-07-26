@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani:wght@400;500&family=Rubik:wght@300;400&display=swap');
+:root {
+    --red-gradient: linear-gradient(90deg, rgb(253 98 98), rgb(205 84 84));
+    --screen-font: 'Rajdhani', sans-serif;
+    --btn-font: 'Open Sans', sans-serif;
+    --heading-font: 'Rubik', sans-serif;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+body {
+    background-color: #2a68db96;
+    overflow-y: auto;
+}
+*::selection {
+    background-color: rgba(255, 255, 255, 0.822);
+    color: #115ff196;
+}
+
+.heading{
+    font-size: clamp(2.5rem,2.3rem + 1vw,3.5rem);
+    font-size: 3.5rem;
+    margin: clamp(0.75rem,0.6rem + 2vw, 1.25rem);
+    color: white;
+    text-align: center;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+}
+
+.container {
+    width: clamp(33rem,60vw,35rem);
+    height: clamp(40rem,60vh,50rem);
+    border: 2px solid rgb(76 0 105);
+    border-radius: 23px;
+    background-color: rgb(64, 1, 88);
+    margin: 20px auto;
+    position: relative;
+    top: 10vmin;
+    box-shadow: 0px 0px 0px 1px black, 0px 0px 0px 5px rgb(64, 1, 88);
+}
+
+.calculator{
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    font-family: var(--screen-font);
+    font-weight: bold;
+    text-align: right;
+    background-color: rgb(207, 228, 225);
+    display: block;
+    width: 28rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    outline: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 10px 10px;
+}
+.keyboard {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.btn {
+    font-family: var(--btn-font);
+    color: white;
+    background: linear-gradient(90deg, rgb(131 85 155), rgb(110 2 191));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10%;
+    box-shadow: 0px 3px 4px 1px black, 1px 1px 0px 2px rgb(131 85 155);;
+    cursor: pointer;
+    font-size: 2rem;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color:  transparent;
+}
+
+/* When the button is clicked */
+.btn:active {
+    box-shadow: none;
+}
+
+.plusBtn {
+    grid-column: 4/5;
+    grid-row: 4/6;
+    height: auto;
+    background: var(--red-gradient) ;
+}
+
+.del, .clearAll{
+    color: white;
+    font-weight: bold;
+}
+
+.on{
+    background: var(--red-gradient) ;
+}
